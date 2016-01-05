@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- comment -->
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd"[]>
+<?rfc toc="yes" ?>
+<?rfc compact="yes" ?>
+<?rfc sortrefs="no" ?>
+<?rfc subcompact="yes" ?>
+<rfc ipr="trust200902" category="info" docName="draft-holmberg-dispatch-mcptt-namespace-00" submissionType="IETF" xml:lang="en">
+	<front>
+		<title abbrev="MCPTT R-P namespace">
+		IANA Registration of New Session Initiation Protocol (SIP)
+
+                      Resource-Priority Namespace for Mission Critical Push To Talk service
+		</title>
+		<author fullname="Christer Holmberg" initials="C.H." surname="Holmberg">
+			<organization abbrev="Ericsson">Ericsson</organization>
+			<address>
+				<postal>
+					<street>Hirsalantie 11</street>
+					<city>Jorvas</city>
+					<region/>
+					<code>02420</code>
+					<country>Finland</country>
+				</postal>
+				<phone/>
+				<email>christer.holmberg@ericsson.com</email>
+			</address>
+		</author>
+		<author fullname="Jörgen Axell" initials="J.A" surname="Axell">
+			<organization abbrev="Ericsson">Ericsson</organization>
+			<address>
+				<postal>
+					<street>Kistavägen 25</street>
+					<city>Stockholm</city>
+					<region/>
+					<code>16480</code>
+					<country>Sweden</country>
+				</postal>
+				<phone/>
+				<email>jorgen.axell@ericsson.com</email>
+			</address>
+		</author>
+		<date year="2016"/>
+		<area>Applications and Real-Time</area>
+		<keyword>Resource-Priority</keyword>
+		<keyword>namespace</keyword>
+		<keyword>Resource-priorith</keyword>
+		<keyword>3GPP</keyword>
+		<keyword>IMS</keyword>
+		<keyword>MCPTT</keyword>
+		<abstract>
+
+	<t>
+	   This document creates an additional Session Initiation Protocol (SIP)
+           Resource-Priority namespace to meet the requirements of the 3GPP defined Mission
+           Critical Push To Talk, and places this namespace in the IANA registry.
+        </t>
+		</abstract>
+	</front>
+	<middle>
+		<section title="Introduction">
+	<t>
+           The third generation partnership project (3GPP) has defined a Mission Critical
+           Push To Talk (MCPTT) over LTE service <xref target="TS.3GPP.22.179" />. The MCPTT
+           service supports an enhanced PTT service, suitable for mission critical scenarios,
+           based upon 3GPP Evolved Packet System (EPS) services. The requirements for the 
+           MCPTT service defined within 3GPP can also form the basis for a non-mission 
+           critical Push To Talk (PTT) service.
+        </t>
+	<t>
+	The MCPTT service is intended to support communication between several users (a group
+        call), where each user has the ability to gain access to the permission to talk in an
+        arbitrated manner. However, the MCPTT service also supports private calls between pairs
+        of users.
+	</t>
+	<t>
+         MCPTT is primarily targeting to provide a professional Push To Talk service to
+         e.g., public safety, transport companies, utilities or industrial and nuclear plants.
+         In addition to this a commercial PTT service for non-professional use (e.g., groups of
+         people on holiday) may be delivered through an MCPTT system. Based on their operational
+         model, the performance and MCPTT features in use vary per user organization, where
+         functionality which is more mission critical specific (e.g., Ambient Listening and
+         Imminent Peril Call) might not be available to commercial customers.
+        </t>
+	<t>
+         The MCPTT service provides its users with different priorities for the access to
+         network resources in order to provide means to prioritize between calls when resources
+         are scarce. These priorities take into account among other things the priority and role
+         of the caller, the priority and type of the group, and the situation in which the call
+         is made. According to <xref target="TS.3GPP.22.179" /> at least 8 and up to 30 priority 
+         levels are required.
+	</t>
+	<t>
+	This document creates an additional Session Initiation Protocol (SIP)
+	Resource-Priority namespace to meet the requirements of the 3GPP
+	defined Mission Critical Push To Talk, and places this namespace
+	in the IANA registry.
+        </t>		</section>
+		<section title="Conventions">
+			<t>
+			The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+			"SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+			document are to be interpreted as described in <xref target="RFC2119"/>.
+		</t>
+		</section>
+		<section title="New SIP Resource-Priority Namespace Created">
+<section title="Introduction">
+	<t> 
+    This document introduces the MCPTT namespace, the name coming from the 3GPP defined Mission
+    Critical Push To Talk service.
+        </t>
+</section>
+<section title="The MCPTT namespace">
+       <t>
+    The MCPTT namespace uses the priority levels listed below from lowest to highest
+    priority.
+   <list style="empty">
+    <t>mcptt.1 (lowest priority)</t>
+    <t>mcptt.2</t>
+    <t>mcptt.3</t>
+    <t>mcptt.4</t>
+    <t>mcptt.5</t>
+    <t>mcptt.6</t>
+    <t>mcptt.7</t>
+    <t>mcptt.8</t>
+    <t>mcptt.9</t>
+    <t>mcptt.10</t>
+    <t>mcptt.11</t>
+    <t>mcptt.12</t>
+    <t>mcptt.13</t>
+    <t>mcptt.14</t>
+    <t>mcptt.15</t>
+    <t>mcptt.16</t>
+    <t>mcptt.17</t>
+    <t>mcptt.18</t>
+    <t>mcptt.19</t>
+    <t>mcptt.20</t>
+    <t>mcptt.21</t>
+    <t>mcptt.22</t>
+    <t>mcptt.23</t>
+    <t>mcptt.24</t>
+    <t>mcptt.25</t>
+    <t>mcptt.26</t>
+    <t>mcptt.27</t>
+    <t>mcptt.28</t>
+    <t>mcptt.29</t>
+    <t>mcptt.30 (highest priority)</t>
+   </list>
+       </t>
+       <t>
+    Intended algorithm is preemption.
+       </t>
+       <t>
+    New Warning code: No.
+       </t>
+       <t>
+    New SIP response code: No.
+       </t>
+		</section>
+			</section>
+<section title="Security Considerations">
+		<t>
+   This document has the same Security Considerations as <xref target="RFC4412" />.
+		</t>
+		</section>
+		<section anchor="section.iana" title="IANA Considerations">
+	<t>
+   Abiding by the rules established within <xref target="RFC4412" /> and
+    <xref target="RFC7134" />, this is an
+   Informative RFC registering a new namespace, its associated
+   priority-values, and intended algorithm.
+	</t>
+	</section>
+
+
+		<section title="Acknowledgments">
+			<t>
+            TBD
+		</t>
+		</section>
+		<section title="Change Log">
+			<t>[RFC EDITOR NOTE: Please remove this section when publishing]</t>
+			<t>Changes from draft-holmberg-dispatch-mcptt-namespace-00
+			<list style="symbols">
+					<t>- Some change</t>
+				</list>
+			</t>
+		</section>
+	</middle>
+	<back>
+		<references title="Normative References">
+			<?rfc include="reference.RFC.2119"?>
+			<?rfc include="reference.RFC.4412"?>
+			<?rfc include="reference.RFC.7134"?>
+			<reference anchor="TS.3GPP.22.179">
+				<front>
+					<title>
+                    3rd Generation Partnership Project;
+                    Technical Specification Group Services and System Aspects;
+                    Mission Critical Push To Talk (MCPTT) over LTE;
+                    Stage 1
+                </title>
+					<author>
+						<organization>3GPP</organization>
+					</author>
+					<date year="2015" month="June"/>
+				</front>
+				<seriesInfo value="22.179 13.2.0" name="3GPP TS"/>
+				<format type="HTML" target="http://www.3gpp.org/ftp/Specs/html-info/22179.htm"/>
+			</reference>
+
+		</references>
+	</back>
+</rfc>
