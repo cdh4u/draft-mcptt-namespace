@@ -5,7 +5,7 @@
 <?rfc compact="yes" ?>
 <?rfc sortrefs="no" ?>
 <?rfc subcompact="yes" ?>
-<rfc ipr="trust200902" category="info" docName="draft-holmberg-dispatch-mcptt-rp-namespace-00" submissionType="IETF" xml:lang="en">
+<rfc ipr="trust200902" category="info" docName="draft-holmberg-dispatch-mcptt-rp-namespace-01" submissionType="IETF" xml:lang="en">
 	<front>
 		<title abbrev="MCPTT R-P namespace">
 		IANA Registration of New Session Initiation Protocol (SIP)
@@ -30,7 +30,7 @@
 			<organization abbrev="Ericsson">Ericsson</organization>
 			<address>
 				<postal>
-					<street>Kistavägen 25</street>
+					<street>Grönlandsgatan 31</street>
 					<city>Stockholm</city>
 					<region/>
 					<code>16480</code>
@@ -109,38 +109,76 @@
 			document are to be interpreted as described in <xref target="RFC2119"/>.
 		</t>
 		</section>
+<section title="Applicability">
+       <t>
+    This document defines namespaces applicable for MCPTT services defined by 3GPP
+    that use the network services of a 3GPP defined LTE network.
+       </t>
+</section>
 		<section title="New SIP Resource-Priority Namespaces Created">
 <section title="Introduction">
 	<t> 
-         This document introduces the MCPTT namespaces mcptt1 and mcptt2, the name coming from
+         This document introduces the MCPTT namespaces mcpttp and mcptt2, the name coming from
          the 3GPP defined Mission Critical Push To Talk service.
         </t>
 </section>
+
 <section title="The MCPTT namespaces">
        <t>
-    The MCPTT namespaces use the priority levels listed below from lowest to highest
+    The mcpttp namespace uses the priority levels listed below from lowest to highest
     priority.
    <list style="empty">
-    <t>mcpttN.1 (lowest priority)</t>
-    <t>mcpttN.2</t>
-    <t>mcpttN.3</t>
-    <t>mcpttN.4</t>
-    <t>mcpttN.5</t>
-    <t>mcpttN.6</t>
-    <t>mcpttN.7</t>
-    <t>mcpttN.8</t>
-    <t>mcpttN.9</t>
-    <t>mcpttN.10</t>
-    <t>mcpttN.11</t>
-    <t>mcpttN.12</t>
-    <t>mcpttN.13</t>
-    <t>mcpttN.14</t>
-    <t>mcpttN.15</t>
-    <t>mcpttN.16  (highest priority)</t>
-   </list> where N is 1 or 2.
+    <t>mcpttp.0 (lowest priority)</t>
+    <t>mcpttp.1</t>
+    <t>mcpttp.2</t>
+    <t>mcpttp.3</t>
+    <t>mcpttp.4</t>
+    <t>mcpttp.5</t>
+    <t>mcpttp.6</t>
+    <t>mcpttp.7</t>
+    <t>mcpttp.8</t>
+    <t>mcpttp.9</t>
+    <t>mcpttp.10</t>
+    <t>mcpttp.11</t>
+    <t>mcpttp.12</t>
+    <t>mcpttp.13</t>
+    <t>mcpttp.14</t>
+    <t>mcpttp.15  (highest priority)</t>
+   </list>
        </t>
        <t>
-    Intended algorithm for mcptt1 is preemption, and for mcptt2 is queueing.
+    Intended algorithm for mcpttp is preemption.
+       </t>
+       <t>
+    New Warning code: No.
+       </t>
+       <t>
+    New SIP response code: No.
+       </t>
+       <t>
+    The mcpttq namespace uses the priority levels listed below from lowest to highest
+    priority.
+   <list style="empty">
+    <t>mcpttq.0 (lowest priority)</t>
+    <t>mcpttq.1</t>
+    <t>mcpttq.2</t>
+    <t>mcpttq.3</t>
+    <t>mcpttq.4</t>
+    <t>mcpttq.5</t>
+    <t>mcpttq.6</t>
+    <t>mcpttq.7</t>
+    <t>mcpttq.8</t>
+    <t>mcpttq.9</t>
+    <t>mcpttq.10</t>
+    <t>mcpttq.11</t>
+    <t>mcpttq.12</t>
+    <t>mcpttq.13</t>
+    <t>mcpttq.14</t>
+    <t>mcpttq.15  (highest priority)</t>
+   </list>
+       </t>
+       <t>
+    Intended algorithm for mcpttq is queuing.
        </t>
        <t>
     New Warning code: No.
@@ -164,20 +202,22 @@
 	</t>
 	</section>
 
-
-		<section title="Acknowledgments">
-			<t>
-            TBD
-		</t>
-		</section>
-		<section title="Change Log">
-			<t>[RFC EDITOR NOTE: Please remove this section when publishing]</t>
-			<t>Changes from draft-holmberg-dispatch-mcptt-namespace-00
-			<list style="symbols">
-					<t>- Some change</t>
-				</list>
-			</t>
-		</section>
+    <section title="Acknowledgments">
+        <t>
+            The authors would like to thank Bob Fredericks, Baruh Hason, Mary Barnes and
+            Keith Drage for comments and discussions.
+        </t>
+    </section>
+    <section title="Change Log">
+        <t>[RFC EDITOR NOTE: Please remove this section when publishing]</t>
+        <t>Changes from draft-holmberg-dispatch-mcptt-rp-namespace-00.  
+            <list style="symbols">
+                <t>- The two namespaces have been spelt out explicitly.</t>
+                <t>- The numbering of priority levels is changed from 1-16 to 0-15.</t>
+                <t>- Address of one author has changed.</t>
+            </list>
+        </t>
+    </section>
 	</middle>
 	<back>
 		<references title="Normative References">
