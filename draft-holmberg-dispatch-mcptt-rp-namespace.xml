@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
 <!-- comment -->
 <!DOCTYPE rfc SYSTEM "rfc2629.dtd"[]>
 <?rfc toc="yes" ?>
 <?rfc compact="yes" ?>
 <?rfc sortrefs="no" ?>
 <?rfc subcompact="yes" ?>
-<rfc ipr="trust200902" category="info" docName="draft-holmberg-dispatch-mcptt-rp-namespace-02" submissionType="IETF" xml:lang="en">
+<rfc ipr="trust200902" category="info" docName="draft-holmberg-dispatch-mcptt-rp-namespace-03" submissionType="IETF" xml:lang="en">
 	<front>
 		<title abbrev="MCPTT R-P namespace">
 		IANA Registration of New Session Initiation Protocol (SIP) Resource-Priority Namespace
@@ -49,9 +49,9 @@
 		<keyword>MCPTT</keyword>
 		<abstract>
 	     <t>
-          This document creates an additional Session Initiation Protocol (SIP)
-          Resource-Priority namespace to meet the requirements of the 3GPP defined Mission
-          Critical Push To Talk, and places this namespace in the IANA registry.
+           This document creates an additional Session Initiation Protocol (SIP)
+           Resource-Priority namespace to meet the requirements of the 3GPP defined Mission
+           Critical Push To Talk, and places this namespace in the IANA registry.
        </t>
 		</abstract>
 	</front>
@@ -66,33 +66,40 @@
            critical Push To Talk (PTT) service.
        </t>
 	     <t>
-	         The MCPTT service is intended to support communication between several users (a group
-           call), where each user has the ability to gain access to the permission to talk in an
-           arbitrated manner. However, the MCPTT service also supports private calls between pairs
-           of users.
+	   The MCPTT service is intended to support communication between several users (a group
+           call), where each user can gain permission to talk in an arbitrated manner. However,
+           the MCPTT service also supports private calls between pairs of users.
 	    </t>
 	    <t>
-           MCPTT is primarily targeting to provide a professional Push To Talk service to
-           e.g., public safety, transport companies, utilities or industrial and nuclear plants.
-           In addition to this a commercial PTT service for non-professional use (e.g., groups of
-           people on holiday) may be delivered through an MCPTT system. Based on their operational
-           model, the performance and MCPTT features in use vary per user organization, where
-           functionality which is more mission critical specific (e.g., Imminent Peril Call) might
-					 not be available to commercial customers.
+           MCPTT is primarily targeted to provide a professional Push To Talk service to e.g.,
+           public safety, transport companies, utilities or industrial and nuclear plants. In
+           addition to this a commercial PTT service for non-professional use (e.g., groups of
+           people on holiday) may be delivered through an MCPTT system. Based on their                      operational model, the performance and MCPTT features in use vary per user
+           organization, where functionality which is more mission critical specific (e.g.,
+           Imminent Peril Call) might not be available to commercial customers.
       </t>
 	    <t>
            The MCPTT service provides its users with different priorities for the access to
-           network resources in order to provide means to prioritize between calls when resources
-           are scarce. These priorities take into account among other things the priority and role
-           of the caller, the priority and type of the group, and the situation in which the call
-           is made. According to <xref target="TS.3GPP.22.179" /> at least 8 and up to 30 priority
-           levels are required.
+           network resources in order to provide means to prioritize between calls when           resources are scarce. These priorities take into account among other things the
+           priority and role of the caller, the priority and type of the group, and the
+           situation in which the call is made.
 	    </t>
       <t>
-           High priority calls when there is danger of life for either the public safety worker
-           or any other human need to be set up immediately and thus require preemption. Other
+           The SIP level call control procedures using these namespaces are specified in 
+           <xref target="TS.3GPP.24.379" />.
+           The namespaces defined here will support a wide range of queuing options. The
+           namespaces correspond to what can be supported over the 3GPP Rx interface, defined
+           in <xref target="TS.3GPP.29.214" />. The usage of the namespaces can be tailored
+           to the needs of the operator. The mechanism to do this is to configure which
+           values a specific user is allowed to use. This configuration is specified in
+           <xref target="TS.3GPP.24.384" />.
+      </t>
+      <t>
+           High priority calls when there is danger of life, for either the public safety worker
+           or any other human, need to be set up immediately and thus require preemption. Other
            calls may be less sensitive in call set-up time but have a high priority once
-           established. For these calls a queueing mechanism is more appropriate.
+           established. For these calls a queueing mechanism is more appropriate. MCPTT data
+           transfer currently under development can benefit from a queueing mechanism.
       </t>
 	    <t>
 	         This document creates additional Session Initiation Protocol (SIP)
@@ -104,7 +111,8 @@
     <section title="Applicability">
       <t>
            This document defines namespaces applicable for MCPTT services defined by 3GPP
-           that use the network services of a 3GPP defined LTE network.
+           that use the network services of a 3GPP defined LTE network. The use of this
+           namespace outside such network is undefined.
       </t>
     </section>
 		<section title="New SIP Resource-Priority Namespaces Created">
@@ -231,10 +239,57 @@
 					<author>
 						 <organization>3GPP</organization>
 					</author>
-					<date year="2015" month="June"/>
+					<date year="2015" month="December"/>
 				</front>
-				<seriesInfo value="22.179 13.2.0" name="3GPP TS"/>
-				<format type="HTML" target="http://www.3gpp.org/ftp/Specs/html-info/22179.htm"/>
+				<seriesInfo value="22.179 13.3.0" name="3GPP TS"/>
+				<format type="HTML" target="http://www.3gpp.org/ftp/Specs/archive/22_series/22.179/22179-d30.zip"/>
+			</reference>
+			<reference anchor="TS.3GPP.29.214">
+				<front>
+					<title>
+             3rd Generation Partnership Project;
+             Technical Specification Group Core Network and Terminals;
+             Policy and Charging Control over Rx reference point;
+          </title>
+					<author>
+						 <organization>3GPP</organization>
+					</author>
+					<date year="2016" month="September"/>
+				</front>
+				<seriesInfo value="29.314 13.7.0" name="3GPP TS"/>
+				<format type="HTML" target="http://www.3gpp.org/ftp/Specs/archive/29_series/29.214/29214-d70.zip"/>
+			</reference>
+			<reference anchor="TS.3GPP.24.379">
+				<front>
+					<title>
+             3rd Generation Partnership Project;
+             Technical Specification Group Core Network and Terminals;
+             Mission Critical Push To Talk (MCPTT) call control; Protocol specification;
+          </title>
+					<author>
+						 <organization>3GPP</organization>
+					</author>
+					<date year="2016" month="September"/>
+				</front>
+				<seriesInfo value="24.379 13.2.0" name="3GPP TS"/>
+				<format type="HTML" target="http://www.3gpp.org/ftp/Specs/archive/24_series/24.379/24379-d20.zip"/>
+			</reference>
+			<reference anchor="TS.3GPP.24.384">
+				<front>
+					<title>
+             3rd Generation Partnership Project;
+             Technical Specification Group Core Network and Terminals;
+             Mission Critical Push To Talk (MCPTT) configuration management;
+             Protocol specification
+
+          </title>
+					<author>
+						 <organization>3GPP</organization>
+					</author>
+					<date year="2016" month="September"/>
+				</front>
+				<seriesInfo value="24.384 13.2.0" name="3GPP TS"/>
+				<format type="HTML" target="http://www.3gpp.org/ftp/Specs/archive/24_series/24.384/24384-d20.zip"/>
 			</reference>
 		</references>
 	</back>
