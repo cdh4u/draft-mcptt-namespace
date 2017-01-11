@@ -5,7 +5,7 @@
 <?rfc compact="yes" ?>
 <?rfc sortrefs="no" ?>
 <?rfc subcompact="yes" ?>
-<rfc ipr="trust200902" category="info" docName="draft-holmberg-dispatch-mcptt-rp-namespace-03" submissionType="IETF" xml:lang="en">
+<rfc ipr="trust200902" category="info" docName="draft-holmberg-dispatch-mcptt-rp-namespace-04" submissionType="IETF" xml:lang="en">
 	<front>
 		<title abbrev="MCPTT R-P namespace">
 		IANA Registration of New Session Initiation Protocol (SIP) Resource-Priority Namespace
