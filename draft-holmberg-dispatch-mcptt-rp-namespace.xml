@@ -212,6 +212,11 @@
     </section>
     <section title="Change Log">
         <t>[RFC EDITOR NOTE: Please remove this section when publishing]</t>
+		<t>Changes from draft-holmberg-dispatch-mcptt-rp-namespace-03.
+            <list style="symbols">
+                <t>- Editorial changes based on sec- and opt- directorate reviews.</t>
+            </list>
+        </t>
         <t>Changes from draft-holmberg-dispatch-mcptt-rp-namespace-01.
             <list style="symbols">
                 <t>- Removal of Conventions section.</t>
