@@ -39,7 +39,7 @@
 				<email>jorgen.axell@ericsson.com</email>
 			</address>
 		</author>
-		<date year="2016"/>
+		<date year="2017"/>
 		<area>Applications and Real-Time</area>
 		<keyword>Resource-Priority</keyword>
 		<keyword>namespace</keyword>
@@ -85,7 +85,7 @@
            situation in which the call is made.
 	    </t>
       <t>
-           The SIP level call control procedures using these namespaces are specified in 
+           The SIP level call control procedures using these namespaces are specified in
            <xref target="TS.3GPP.24.379" />.
            The namespaces defined here will support a wide range of queuing options. The
            namespaces correspond to what can be supported over the 3GPP Rx interface, defined
@@ -99,7 +99,9 @@
            or any other human, need to be set up immediately and thus require preemption. Other
            calls may be less sensitive in call set-up time but have a high priority once
            established. For these calls a queueing mechanism is more appropriate. MCPTT data
-           transfer currently under development can benefit from a queueing mechanism.
+           transfer currently under development can benefit from a queueing mechanism. Another
+           example is video only calls that are not critical in call set-up time, but where
+           keeping the call is important.
       </t>
 	    <t>
 	         This document creates additional Session Initiation Protocol (SIP)
@@ -190,7 +192,8 @@
 		</section>
     <section title="Security Considerations">
 		   <t>
-          This document has the same Security Considerations as <xref target="RFC4412" />.
+          This document does not have any impact on the security of the SIP MCPTT protocol. Its
+          purpose is purely administrative in nature.
 		   </t>
 		</section>
 		<section anchor="section.iana" title="IANA Considerations">
@@ -209,10 +212,15 @@
     </section>
     <section title="Change Log">
         <t>[RFC EDITOR NOTE: Please remove this section when publishing]</t>
-				<t>Changes from draft-holmberg-dispatch-mcptt-rp-namespace-01.
+		<t>Changes from draft-holmberg-dispatch-mcptt-rp-namespace-03.
+            <list style="symbols">
+                <t>- Editorial changes based on sec- and opt- directorate reviews.</t>
+            </list>
+        </t>
+        <t>Changes from draft-holmberg-dispatch-mcptt-rp-namespace-01.
             <list style="symbols">
                 <t>- Removal of Conventions section.</t>
-								<t>- Editorial changes.</t>
+                <t>- Editorial changes.</t>
             </list>
         </t>
         <t>Changes from draft-holmberg-dispatch-mcptt-rp-namespace-00.
@@ -223,43 +231,43 @@
             </list>
         </t>
     </section>
-	</middle>
-	<back>
-		<references title="Normative References">
-			<?rfc include="reference.RFC.4412"?>
-			<?rfc include="reference.RFC.7134"?>
-			<reference anchor="TS.3GPP.22.179">
-				<front>
-					<title>
+    </middle>
+    <back>
+        <references title="Normative References">
+            <?rfc include="reference.RFC.4412"?>
+            <?rfc include="reference.RFC.7134"?>
+            <reference anchor="TS.3GPP.22.179">
+            <front>
+                <title>
              3rd Generation Partnership Project;
              Technical Specification Group Services and System Aspects;
              Mission Critical Push To Talk (MCPTT) over LTE;
              Stage 1
-          </title>
-					<author>
-						 <organization>3GPP</organization>
-					</author>
-					<date year="2015" month="December"/>
-				</front>
-				<seriesInfo value="22.179 13.3.0" name="3GPP TS"/>
-				<format type="HTML" target="http://www.3gpp.org/ftp/Specs/archive/22_series/22.179/22179-d30.zip"/>
-			</reference>
-			<reference anchor="TS.3GPP.29.214">
-				<front>
-					<title>
+                </title>
+                <author>
+                    <organization>3GPP</organization>
+                </author>
+                <date year="2015" month="December"/>
+            </front>
+                <seriesInfo value="22.179 13.3.0" name="3GPP TS"/>
+                <format type="HTML" target="http://www.3gpp.org/ftp/Specs/archive/22_series/22.179/22179-d30.zip"/>
+            </reference>
+            <reference anchor="TS.3GPP.29.214">
+            <front>
+                <title>
              3rd Generation Partnership Project;
              Technical Specification Group Core Network and Terminals;
              Policy and Charging Control over Rx reference point;
-          </title>
-					<author>
-						 <organization>3GPP</organization>
-					</author>
-					<date year="2016" month="September"/>
-				</front>
-				<seriesInfo value="29.314 13.7.0" name="3GPP TS"/>
-				<format type="HTML" target="http://www.3gpp.org/ftp/Specs/archive/29_series/29.214/29214-d70.zip"/>
-			</reference>
-			<reference anchor="TS.3GPP.24.379">
+                </title>
+                <author>
+                    <organization>3GPP</organization>
+                </author>
+                <date year="2016" month="September"/>
+            </front>
+            <seriesInfo value="29.314 13.7.0" name="3GPP TS"/>
+                <format type="HTML" target="http://www.3gpp.org/ftp/Specs/archive/29_series/29.214/29214-d70.zip"/>
+            </reference>
+            <reference anchor="TS.3GPP.24.379">
 				<front>
 					<title>
              3rd Generation Partnership Project;
